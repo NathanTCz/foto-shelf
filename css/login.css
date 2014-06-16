@@ -1,0 +1,153 @@
+/* Include icon css */
+@import url('icons.css');
+
+@font-face {
+    font-family: 'title_font';
+    src: url('../fonts/Raleway-Thin.otf') format('truetype');
+}
+
+input:focus {
+  outline: none;
+}
+
+.title {
+  padding: 5px;
+  
+  font-family: 'title_font';
+  font-size: 40pt;
+  color: #FF4500;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #222;
+
+  font-family: 'title_font';
+}
+
+.login_box {
+  display: block;
+
+  text-align: center;
+
+  width: 30em;
+  height: 25em;
+
+  margin: 10% auto 0 auto;
+
+  border: 1px solid #555;
+  background: #555;
+}
+
+.register_box {
+  display: block;
+
+  text-align: center;
+
+  width: 20em;
+  height: 30em;
+
+  margin: 10% auto 0 auto;
+
+  border: 1px solid #555;
+  background: #555;
+}
+
+.regular_box {
+  display: block;
+
+  text-align: center;
+
+  width: 20em;
+  height: 15em;
+
+  margin: 12em auto 0 auto;
+
+  border: 1px solid #555;
+  background: #555;
+}
+
+.form_box {
+  display: block;
+
+  width: 85%;
+  height: 2em;
+
+  margin: 3em auto;
+}
+
+.form_box > span {
+  display: block;
+
+  width: 2em;
+
+  background: #AAA;
+  color: #DDD;
+
+  padding: 0.5em;
+}
+
+.form_box > span:hover {
+  color: #DDD;
+}
+
+.form_box input {
+  position: relative;
+  top: -31.6px;
+  left: 22px;
+  width: 88%;
+  height: 31.5px;
+
+  margin: 0;
+  padding: 5px;
+
+  background: #FFF;
+  border: none;
+
+  color: #666;
+}
+
+.login_submit {
+  width: auto;
+  height: 2.5em;
+
+  background: #FF4500;
+  border: none;
+
+  cursor: pointer;
+  font-family: 'title_font';
+}
+
+.login_submit > span {
+  padding: 5px;
+
+  font-size: 15pt;
+  color: #DDD;
+}
+
+.errors {
+  display: block;
+  position: relative;
+  bottom: -25px;
+}
+
+.login_options {
+  display: block;
+  position: relative;
+  bottom: -50px;
+
+  font-size: 10pt;
+}
+
+.login_options span, a, u {
+  color: #AAA;
+}

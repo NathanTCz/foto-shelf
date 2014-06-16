@@ -1,0 +1,478 @@
+/*     COLOR SCHEME    */
+/*                     */
+/* black #4D4C48       */
+/* green #739541       */
+/* blue  #659681       */
+/* grey  #ADA99F       */
+/* white #EEE9E3       */
+
+/* Include icon css */
+@import url('icons.css');
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+    font-family: 'flat_font';
+    src: url('../fonts/Raleway-Thin.otf') format('truetype');
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+@-moz-keyframes slide {
+  100% { right: -2em; }
+}
+@-webkit-keyframes slide {
+  100% { right: -2em; }
+}
+@keyframes slide {
+  100% { right: -2em; }
+}
+
+@-moz-keyframes slide-back {
+  100% { right: -16em; }
+}
+@-webkit-keyframes slide-back {
+  100% { right: -16em; }
+}
+@keyframes slide-back {
+  100% { right: -16em; }
+}
+
+html, body {
+  margin:0;
+  padding:0;
+
+  width:100%;
+  height:100%;
+
+  font-family: flat_font;
+
+  background: #222;
+
+  z-index: -1;
+
+  /*MSIE No Scrollbar*/
+  scrollbar: none;
+}
+
+div {
+  display:block;
+}
+
+a {
+  color: #7f8c8d;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.hidden {
+  display:none;
+} 
+
+.title {
+  padding: 5px;
+  
+  font-family: 'flat_font';
+  font-size: 15pt;
+  color: #FFF;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  background: #222;
+}
+
+.main {
+  width: 100%;
+  height: 91%;
+
+  margin: 60px auto 0 auto;
+}
+
+.triangle {
+  position: relative;
+  top: 5px;
+  left: 28px;
+  z-index: 999;
+  
+  display:none;
+
+  width: 0; 
+  height: 0;
+ 
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;	
+  border-top: 15px solid #FF4500;
+}
+
+.user_bar {
+  position: fixed;
+  top: 0px;
+  right: 1.5em;
+
+  z-index: 3;
+
+  width: auto;
+  height: 1em;
+
+  color: #FFFAFA;
+}
+
+.user_bar button {
+  position: absolute;
+  top: 0;
+  right: -16em;
+
+  width: 16em;
+
+  background: #555;
+  border: none;
+
+  text-align: left;
+  color: #FFFAFA;
+  cursor: pointer;
+
+  -webkit-transition: all 0.5s;
+     -moz-transition: all 0.5s;
+          transision: all 0.5s;
+}
+
+.user_bar:hover button {
+  right: -2em;
+}
+
+.nav {
+  position: fixed;
+
+  width: 100%;
+  height: 60px;
+
+  margin-bottom: 10px;
+
+  z-index: 2;
+
+  background: #555;
+}
+
+.nav .title {
+  position: relative;
+  top: 10px;
+  left: 0px;
+  
+  font-size: 25pt;
+  font-family: 'flat_font';
+  color: #FFFAFA;
+}
+
+.nav_menu {
+  position: relative;
+  top: -55px;
+  left: 3em;
+}
+
+.nav_menu ul {
+  list-style: none;
+}
+
+.nav_menu ul li {
+  display: inline-block;
+
+  width: 85px;
+  height: 50px;
+
+  margin: 0;
+  padding: 5px;
+
+  color: #DDD;
+  
+  text-align: center;
+}
+
+.nav_menu ul li:hover {
+  color: #7f8c8d;
+}
+
+.nav_menu ul li.active {
+  color: #DDD;
+  background: #FF4500;
+}
+
+.nav_menu ul li.active .triangle {
+  display: block;
+}
+
+.nav_menu ul li:active {
+  color: #DDD;
+  background: #FF4500;
+}
+
+.nav_menu ul li span.nav_icon {
+  font-size: 28px;
+}
+
+.page_title {
+  display: inline-block;
+  position: absolute;
+  top: 0.4em;
+  left: 6em;
+  
+  font-family: sans-serif;
+  font-size: 20pt;
+  color: #AAA;
+}
+
+.widget {
+  float: left;
+
+  background: #FFF;
+}
+
+.widget#picture {
+  width: 80%;
+  height: auto;
+  max-height: 92%;
+
+  margin: 2em 10%;
+
+  background: #000;
+  text-align: center;
+}
+
+.widget#picture img {
+  position: relative;
+
+  max-width: 90%;
+  max-height: 93%;
+
+  margin: 1em auto;
+
+  cursor: pointer;
+
+  -webkit-transition: all 0.5s;
+     -moz-transition: all 0.5s;
+          transision: all 0.5s;
+}
+
+.widget#picture img.scaled {
+  margin: 5% auto;
+
+  z-index: 4;
+
+  opacity: 1;
+
+  -webkit-transform: scale(1.5);
+     -moz-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.widget#picture div#loader {
+  margin: 25% auto;
+}
+
+.widget#picture span[class*='icon-'] {
+  display: block;
+  position: relative;
+
+  color: #DDD;
+}
+
+.widget#picture span#cog1 {
+  font-size: 5em;
+
+  -webkit-animation: spin 1.75s linear 0s infinite;
+     -moz-animation: spin 1.75s infinite linear;
+          animation: spin 1.75s infinite linear;
+}
+
+.widget#picture span#cog2 {
+  top: -0.4em;
+  left: 0.95em;
+
+  font-size: 3em;
+
+  -webkit-animation: spin 1.75s linear 0s infinite reverse;
+     -moz-animation: spin 1.75s infinite linear reverse;
+          animation: spin 1.75s infinite linear reverse;
+}
+
+.widget#picture span#uploader {
+  display: block;
+
+  color: #DDD;
+}
+
+.arrow {
+  position: absolute;
+  top: 0px;
+
+  width: 2em;
+  height: 100%;
+
+  z-index: 0;
+
+  background: #222;
+  border-right: 1px solid #555;
+  border-left: 1px solid #555;
+
+  font-size: 15pt;
+  text-align: center;
+}
+
+.arrow#arrow_left {
+  left: 0px;
+
+  cursor: pointer;
+}
+
+.arrow#arrow_right {
+  right: 0px;
+
+  cursor: pointer;
+}
+
+.arrow span {
+  position: relative;
+  top: 50%;
+  color: #FFFAFA;
+}
+
+.arrow:hover {
+  background: #555;
+}
+
+.widget#upload {
+  width: 100%;
+  height: 40%;
+
+  text-align: -webkit-center;
+  font-family: 'flat_font';
+
+  background: #222;
+
+  color: #DDD;
+}
+
+.widget#upload .dragndrop {
+  width: 80%;
+  height: auto;
+  min-height: 5em;
+  max-height: 30em;
+
+  overflow-y: scroll;
+
+  margin: 1em;
+
+  border: 1px dashed #DDD;
+}
+
+.widget#upload .dragndrop > span#placeholder {
+  display: block;
+
+  padding-top: 2em;
+}
+
+div.preview_pic {
+  display: inline-block;
+  margin: 1em;
+}
+
+div.preview_pic > img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.widget#upload progress {
+  display: block;
+  width: 55%;
+}
+
+.widget#upload progress:after {
+  content: '%';
+}
+
+.form_box {
+  display: block;
+
+  width: 85%;
+  height: 2em;
+
+  margin: 3em auto 1em auto;
+}
+
+.form_box > span {
+  display: block;
+
+  width: 8em;
+
+  background: #555;
+
+  padding: 0.5em;
+
+  cursor: pointer;
+}
+
+.form_box > span:hover {
+  color: #DDD;
+}
+
+.form_box > span > u {
+  text-decoration: none;
+  font-family: 'flat_font';
+  font-size: 13pt;
+}
+
+.form_box input {
+  position: relative;
+  top: -31.6px;
+  left: 22px;
+  width: 88%;
+  height: 31.5px;
+
+  margin: 0;
+  padding: 5px;
+
+  background: #FFF;
+  border: none;
+
+  color: #666;
+}
+
+.upload_submit {
+  width: auto;
+  height: 2.5em;
+
+  background: #FF4500;
+  border: none;
+
+  cursor: pointer;
+  font-family: 'flat_font';
+}
+
+.upload_submit > span {
+  padding: 5px;
+
+  font-size: 15pt;
+  color: #DDD;
+}
